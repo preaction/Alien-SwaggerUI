@@ -1,0 +1,59 @@
+# NAME
+
+Alien::SwaggerUI - Render OpenAPI spec documentation with Swagger-UI
+
+# VERSION
+
+version 0.001
+
+# STATUS
+
+<a href="https://travis-ci.org/preaction/Alien-SwaggerUI"><img src="https://travis-ci.org/preaction/Alien-SwaggerUI.svg?branch=master"></a><a href="https://coveralls.io/r/preaction/Alien-SwaggerUI"><img src="https://coveralls.io/repos/preaction/Alien-SwaggerUI/badge.png" alt="Coverage Status" /></a>
+
+# SYNOPSIS
+
+    use Alien::SwaggerUI;
+    my $app_dir = Alien::SwaggerUI->root_dir;
+
+    #-- Serve Swagger-UI with Mojolicious::Lite
+    use File::Spec::Functions qw( catfile );
+    use Alien::SwaggerUI;
+    use Mojolicious::Lite;
+
+    get '/swagger/*path' => { path => 'index.html' }, sub {
+        my ( $c ) = @_;
+        my $path = catfile( Alien::SwaggerUI->root_dir, $c->stash( 'path' ) );
+        my $file = Mojo::Asset::File->new( path => $path );
+        $c->reply->asset( $file );
+    };
+
+    app->start;
+
+# DESCRIPTION
+
+This module contains [Swagger UI](http://swagger.io/swagger-ui/). This
+pure-JavaScript application renders beautiful documentation for your
+application's [OpenAPI specification](https://www.openapis.org).
+
+The application is contained in a `share/` directory. You can get the path
+to this directory with the ["root\_dir"](#root_dir) method.
+
+To render your specific API documentation, pass it in with the
+`?url=/path/to/spec` query parameter.
+
+# SEE ALSO
+
+- [Swagger UI](http://swagger.io/swagger-ui/)
+- [OpenAPI specification](https://www.openapis.org)
+
+# AUTHOR
+
+Doug Bell <preaction@cpan.org>
+
+# COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2016 by Doug Bell.
+
+This is free software, licensed under:
+
+    The Apache License, Version 2.0, January 2004
