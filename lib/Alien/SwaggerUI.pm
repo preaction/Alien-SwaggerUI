@@ -28,7 +28,7 @@ pure-JavaScript application renders beautiful documentation for your
 application's L<OpenAPI specification|https://www.openapis.org>.
 
 The application is contained in a C<share/> directory. You can get the path
-to this directory with the L</root_dir> method.
+to this directory with the C<root_dir> method.
 
 To render your specific API documentation, pass it in with the
 C<?url=/path/to/spec> query parameter.
