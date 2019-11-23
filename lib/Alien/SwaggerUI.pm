@@ -1,5 +1,5 @@
 package Alien::SwaggerUI;
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 # ABSTRACT: Render OpenAPI spec documentation with Swagger-UI
 
 =head1 SYNOPSIS
