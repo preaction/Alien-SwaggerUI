@@ -1,5 +1,10 @@
 Changelog for Alien-SwaggerUI
 
+{{ $NEXT }}
+
+    - Upgraded Swagger UI to version 3.42.2. Thanks @sudo-batman!
+    - Fixed a broken link in the documentation. Thanks @manwar!
+
 0.001     2016-11-26 20:19:52-06:00 America/Chicago
 
     - Initial release: Swagger-UI version 2.2.8

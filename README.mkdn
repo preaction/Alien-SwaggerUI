@@ -4,7 +4,7 @@ Alien::SwaggerUI - Render OpenAPI spec documentation with Swagger-UI
 
 # VERSION
 
-version 0.001
+version 0.002
 
 # STATUS
 
@@ -36,7 +36,7 @@ pure-JavaScript application renders beautiful documentation for your
 application's [OpenAPI specification](https://www.openapis.org).
 
 The application is contained in a `share/` directory. You can get the path
-to this directory with the ["root\_dir"](#root_dir) method.
+to this directory with the `root_dir` method.
 
 To render your specific API documentation, pass it in with the
 `?url=/path/to/spec` query parameter.
@@ -49,6 +49,11 @@ To render your specific API documentation, pass it in with the
 # AUTHOR
 
 Doug Bell <preaction@cpan.org>
+
+# CONTRIBUTORS
+
+- Gaurav Rai <gauravrai7860@gmail.com>
+- Mohammad S Anwar <mohammad.anwar@yahoo.com>
 
 # COPYRIGHT AND LICENSE
 
